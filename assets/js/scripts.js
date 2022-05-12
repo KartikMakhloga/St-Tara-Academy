@@ -116,7 +116,7 @@
                         flag = false;
                     }
                 });
-        };
+        }
     }
     singleGalleryCarousel();
 
@@ -141,7 +141,7 @@
     
         current.textContent = current.textContent.includes('Read More') ? "Read Less..." : "Read More...";
     
-    })
+    });
 
 
 
@@ -182,7 +182,7 @@
                 }
             });
         } else {
-            $('.screen-reader-response').fadeIn().html('<div class="alert alert-danger"><strong>Warning!</strong> Please fillup the informations correctly.</div>')
+            $('.screen-reader-response').fadeIn().html('<div class="alert alert-danger"><strong>Warning!</strong> Please fillup the informations correctly.</div>');
         }
         return false;
     });

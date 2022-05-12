@@ -888,7 +888,9 @@
 		font-size: 20px;
 	}
 	.menu-wrap{
-		width: 100%;
+		position: fixed;
+        width: 100%;
+   
 	}
 
 	.menu-wrap-2{

@@ -2153,6 +2153,10 @@ color:#2a3deb !important
 
 .read-more-btn{
     color: #0984e3;
+
+}
+.read-more-btn:hover{
+    color: #000000;
 }
 
 .read-more-text{
