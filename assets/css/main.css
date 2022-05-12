@@ -1,0 +1,319 @@
+/* body{
+  background-image: url(..//b.png);
+  background-size: cover;
+   
+    background-repeat: no-repeat;
+}  */
+ 
+/* .logo {
+    float: left;
+    line-height: 100px;
+} */
+ 
+
+.navigation {
+    display: block;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.close-menu {
+    color: #fff;
+    font-size: 60px;
+    cursor: pointer;
+    line-height: 49px;
+}
+ 
+ 
+ 
+.search-wrap {
+    position: absolute;
+    right: 25px;
+    top: 11px;
+    display: block;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    margin-left: 0;
+    padding: 0;
+    border: 2px solid #f7f7f7;
+    border-radius: 20px;  
+    transition: all 0.25s ease 0.3s;
+}
+.search-wrap:before {
+    top: 90%;
+    left: 90%;
+    width: 14px;
+    height: 2px;
+    background-color: #f7f7f7;
+    border-radius: 1px;   
+    transition: width 0.15s ease 0.55s;     
+    transform: rotate(45deg); 
+    transform-origin: top left;
+}
+ 
+ 
+ 
+.search-wrap:before,
+.eks:before,
+.eks:after {
+    content: "";
+    position: absolute;
+    display: block;
+}
+.menu-wrap a {
+    color: #fff;
+}
+.menu-wrap a:hover,
+.menu-wrap a:focus {
+    color: #7beec7;
+}
+ 
+/* Menu Button */
+.menu-button {
+    position: fixed;
+    right: 15px;
+    z-index: 1000;
+    margin: 1em;
+    padding: 0;
+    width: 2.5em;
+    height: 2.25em;
+    border: none;
+    text-indent: 2.5em;
+    font-size: 1.5em;
+    color: transparent;
+    background: transparent;
+    outline: 0;
+}
+ 
+.menu-button:hover {
+    opacity: 0.6;
+}
+  
+ 
+.menu-wrap {
+    position: fixed;
+    z-index: 9999;
+    width: 25%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: #030032;
+    background-position: center center;
+    background-size: cover;
+    font-size: 1.15em;
+    display: table; 
+    transform: translate3d(100%, 0, 0);
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+.menu,
+.menu-list {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 35px
+}
+ 
+.menu-contact-information span {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 2.5px;
+    text-align: right;
+}
+.menu-content {
+    padding-top: 30%;
+}
+.menu-list ul {
+    padding: 0;
+}
+.menu-list ul li {
+    display: block; 
+    transform: translate3d(0, 500px, 0);
+}
+.menu-list,
+.menu-list ul li {   
+    transition: transform 0s 0.4s;
+    transition-timing-function: cubic-bezier(0.8, 0, 0.3, 1);
+}
+.menu-list ul li:nth-child(1) {   
+    transform: translate3d(250px, 0, 0);
+}
+.menu-list ul li:nth-child(2) {
+     transform: translate3d(500px, 0, 0);
+}
+.menu-list ul li:nth-child(3) {    
+    transform: translate3d(1000px, 0, 0);
+}
+.menu-list ul li:nth-child(4) { 
+    transform: translate3d(1500px, 0, 0);
+}
+.menu-list ul li:nth-child(5) {    
+    transform: translate3d(2000px, 0, 0);
+}
+.menu-list ul li:nth-child(6) {
+    -webkit-transform: translate3d(2500px, 0, 0);
+    transform: translate3d(2500px, 0, 0);
+}
+.menu-list ul li:nth-child(7) {
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0);
+}
+.menu-list ul li a {
+    font-weight: 900;
+    font-size: 20px;
+    font-family: 'Lekton', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.5pt;
+    transition: all 350ms cubic-bezier(0.215, .61, .215, 1);
+ 
+}
+ul.sub-menu {
+    position: relative;
+    display: none;
+
+}
+ul.sub-menu li {
+    padding: 0;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    line-height: 10px !important;
+}
+ul.sub-menu li a {
+    font-size: 14px;
+    text-transform: none;
+}
+/* Shown menu */
+.show-menu .menu-wrap { 
+    transform: translate3d(0, 0, 0); 
+    transition: transform 0.8s;
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+.show-menu .menu-list,
+.show-menu .menu-list ul li {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition: -webkit-transform 0.8s;
+    transition: transform 0.8s;
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+.show-menu .menu-list ul li {
+    transition-duration: 0.9s;
+    text-decoration: none;
+    line-height: 42px;
+}
+.show-menu .content::before {
+    opacity: 1;
+    transition: opacity 0.8s;
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);    
+    transform: translate3d(0, 0, 0);
+}
+.main-menu-indicator {
+    display: block;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1000;
+    height: 62px;
+    width: 25px;
+    background: transparent;
+    outline: 0;
+    float: right;
+    position: relative;
+    margin: 17px 0 17px 0;
+}
+.main-menu-indicator:hover {
+    border: 0;
+    box-shadow: none;
+}
+.main-menu-indicator>span {
+    transition: all 0.1s ease 0s;
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    top: 32px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #545454;
+}
+.main-menu-indicator>span:before,
+.main-menu-indicator>span:after {
+    transition: all 0.2s ease 0s;
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 2px;
+    background: #545454;
+    left: 0;
+}
+.main-menu-indicator>span:after {
+    top: -5px;
+}
+.main-menu-indicator>span:before {
+    bottom: -5px;
+}
+
+.main-menu-indicator.active>span {
+    background: transparent;
+}
+
+.main-menu-indicator.active>span:after {
+    top: 0;
+    transform: rotate(45deg);    
+    transform-origin: center center;
+}
+
+.main-menu-indicator.active>span:before {
+    bottom: 0;
+    transform: rotate(-45deg);     
+    transform-origin: center center;
+}
+/* Social Menu */
+.menu-social-media {
+    position: absolute;
+    bottom: 100px;
+}
+.menu-social-media ul {
+    padding: 0;
+    padding-left: 50px;
+}
+.menu-social-media ul li {
+    padding-left: 15px;
+    padding-left: 15px;
+    display: inline;
+}
+/* Menu Information */
+.menu-information {
+    position: absolute;
+    bottom: 18px;
+}
+ 
+.menu-information ul {
+    padding: 0;
+    padding-left: 50px;
+}
+.menu-information ul li {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block;
+    list-style: none;
+    color: #fff;
+    letter-spacing: 2.5pt;
+    font-family: 'Lekton', sans-serif;
+}
+.menu-information ul li span {
+    padding-right: 15px;
+}
+
+
+
+ 
