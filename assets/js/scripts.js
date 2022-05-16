@@ -42,13 +42,35 @@
     /*================================
     countdown
     ==================================*/
-    $('[data-countdown]').each(function() {
-        var $this = $(this),
-            finalDate = $(this).data('countdown');
-        $this.countdown(finalDate, function(event) {
-            $this.html(event.strftime('<span class="cdown days"><span class="time-count">%-D</span> <p>Days</p></span> <span class="cdown hour"><span class="time-count">%-H</span> <p>Hours</p></span> <span class="cdown minutes"><span class="time-count">%M</span> <p>Minutes</p></span> <span class="cdown second"> <span><span class="time-count">%S</span> <p>Seconds</p></span>'));
-        });
+   
+    const counters = document.querySelectorAll('.counter');
+    const speed = 2000; // The lower the slower
+    
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+    
+            // Lower inc to slow and higher to slow
+            const inc = target / speed;
+    
+            // console.log(inc);
+            // console.log(count);
+    
+            // Check if target is reached
+            if (count < target) {
+                // Add inc to count and output in counter
+                counter.innerText = Math.ceil(count + inc);
+                // Call function every ms
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+    
+        updateCount();
     });
+    
 
     /*================================
     Student Testimonial
@@ -143,6 +165,8 @@
     
     });
 
+   
+
 
 
    /*--------------------------------------------------------------
@@ -188,3 +212,4 @@
     });
 
 })(jQuery);
+
