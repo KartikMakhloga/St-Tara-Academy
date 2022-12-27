@@ -2282,7 +2282,8 @@ h4.comment-title:before {
   background: red;
   color: white;
   height: 3rem;
-  width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .admission {
